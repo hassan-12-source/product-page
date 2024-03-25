@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+.navbar-toggler {
+    display: none;
+}
+.nav-desktop {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  margin-right: 100%;
+  margin-top: 30px;
+}
+.nav-desktop li {
+  margin-right: 40px;
+  margin-top: 5px;
+}
+.nav-desktop a {
+  color: hsl(219, 9%, 45%);
+  text-decoration: none;
+}
+.nav-desktop li a {
+  position: relative;
+  text-decoration: none;
+}
+.nav-desktop li a::after {
+  content: '';
+  position: absolute;
+  bottom: -38px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: hsl(26, 100%, 55%); /* Change this to the color you want */
+  transition: width 0.3s;
+}
+.nav-desktop li a:hover::after {
+  width: 100%;
+}
+.nav-desktop a:hover {
+  color: hsl(219, 9%, 45%); 
+}
+.nav-logo{
+  margin-right: 50px;
+}
+.nav-logo-mobile{
+  display: none;
+}
+.cart-and-avatar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 40px;
+  margin-right: 60px;
+  cursor: pointer;
+}
+.avatar{
+  width: 40px;
+  margin-left: 30px;
+}
+.line {
+  position: relative;
+  bottom: -20px;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Center the line */
+  width: 95%; /* Control the width of the line */
+  height: 2px;
+  background-color: hsl(223, 64%, 98%); /* Change this to the color you want */
+}
+.offcanvas{
+  width: 200px !important;
+}
+.cart {
+  position: fixed;
+  right: 50px;
+  top: -350px;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  height: 300px;
+  padding: 15px;
+  position: absolute;
+}
+.cart.show{
+  top: 120px;
+}
+.line-cart{
+  position: relative;
+  background-color: hsl(223, 64%, 98%); 
+  width: 100%;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+}
+@media (max-width: 785.98px) {
+  .navbar-toggler {
+    display: flex;
+    margin-top: 10px;
+  }
+  .nav-item a{
+    color: black;
+    font-weight: bold;
+  }
+  .offcanvas-toggler {
+    display: block;
+  }
+  .nav-desktop{
+      display: none !important;
+  }
+  .nav-logo-mobile{
+    display: block;
+  }
+  .avatar{
+    width: 30px;
+  }
+  .cart-and-avatar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 14px;
+    margin-right: 40px;
+  }
+  .cart{
+    right: 20px;
+  }
+  .cart.show{
+    top: 90px;
+  }
+}
+/*********** Image container **************/
+.hero-container{
+  display: flex;
+  gap: 100px;
+}
+.image-container{
+  margin-left: 200px;
+  display: block;
+  margin-top: 200px;
+  padding: 5px;
+}
+.sub-images {
+  display: block;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.main-image img{
+  width: 400px;
+  height: 350px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.sub-images img{
+  width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.image-wrapper img{
+  width: 96px;
+}
+.image-wrapper {
+  position: relative;
+  margin: 0 auto;
+  display: inline-block;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(246, 243, 243, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.image-wrapper:hover .overlay {
+  opacity: 1;
+}
+/************** Product info ********************/
+.product-info{
+  display: block;
+  margin-top: 14%;
+}
+.product-info > div {
+  margin-bottom: 20px;
+}
+.info {
+  margin-bottom: 20px;
+}
+.info span,
+.info h1,
+.info p {
+  margin-bottom: 40px;
+}
+.info p{
+  width: 60%;
+  color: hsl(219, 9%, 45%);
+}
+.info span{
+  color: hsl(26, 100%, 55%);
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.info h1{
+  color: black;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  width: 50%;
+  margin-top: 15px;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.top h2{
+  color: black;
+  font-weight: bold;
+}
+.top span{
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  border-radius: 5px;
+  padding: 1px;
+  font-weight: bold;
+}
+.bottom {
+  margin-top: 10px;
+}
+.bottom span{
+  color: hsl(220, 14%, 75%);
+  position: relative;
+}
+.bottom span::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: hsl(220, 14%, 75%); 
+}
+.counter-and-button{
+  display: flex;
+  margin-top: 15px;
+  gap: 15px;
+  border: none;
+}
+.counter-and-button button{
+  border: none;
+}
+.background {
+  background-color: hsl(223, 64%, 98%);
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.addtocart button{
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  font-weight: bold;
+  box-shadow: 0 4px 25px hsl(26, 69%, 62%);
+  width: 250%;
+}
+.cart-item{
+  display: flex;
+  margin-top: 15px;
+  gap: 5px;
+}
+.item-details{
+  display: block;
+}
+.item-details span{
+  font-size: 15px;
+  color: hsl(219, 9%, 45%);
+}
+.item-details h2{
+  font-size: 15px;
+  color: (223, 64%, 98%);
+}
+.cart-item img {
+  width: 50px;
+  height: 50px; 
+  border-radius: 10px;
+}
+#checkout-button{
+  margin-top: 20px;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+}
+.cart-items {
+  overflow-y: auto;
+  height: 200px; /* Set a max height for the cart items container */
+}
+@media screen and (max-width: 972px) {
+  .hero-container {
+    display: block;
+    justify-content: center;
+    width: 100%;
+    gap: 0;
+  }
+  .image-container{
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .info{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .info span,
+  .info h1,
+  .info p {
+    width: 130%;
+  }
+  .product-info{
+    margin-left: 15%;
+  }
+  .counter-and-button{
+    display: block;
+  }
+  .addtocart button{
+    width: 140%;
+    margin-top: 15px;
+  }
+  .background{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 140%;
+  }
+}
+.remove-icon {
+  margin-left: 80px;
+  color: gray;
+}
