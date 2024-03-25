@@ -1,3 +1,6 @@
+This repository contains the code for an e-commerce product page built with HTML, CSS, and JavaScript. The page features a responsive design with a navbar, product images, product information, and a shopping cart. Users can view product details, switch between product images, adjust the quantity, and add items to the cart. The cart dynamically updates with the added items, displaying the item name, price, quantity, and total price. The code uses Bootstrap for styling and Font Awesome for icons.
+
+
 # Frontend Mentor - E-commerce product page
 
 ![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
